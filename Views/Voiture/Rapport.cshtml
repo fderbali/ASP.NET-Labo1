@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Labo1.Models.Voiture>
+
+@{
+    ViewBag.Title = "Rapport";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2><p class="bg-primary text-center grostitre">Rapport</p></h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Numero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sorte)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Annee)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prix)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sorte)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Annee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prix) $
+            </td>
+        </tr>
+    }
+
+</table>
+
+<p> TOTAL : @ViewData["NbVoitures"] voitures pour un montant de @ViewData["TotalDesVentes"] $ </p>
+<p> Nombre de voitures américaines de 2000$ ou plus :  @ViewData["NbVoituresAmericainesDePlusDe2000"]</p>
+<p> Nombre de voitures récentes (1991 et +) : @ViewData["NbVoituresRecentes"]</p>
+<p> Prix moyen d'une auto japonaise : @ViewData["PrixMoyenVoitureJaponaise"] $</p>
+<p> @ViewData["ImmatriculationVoitureAmericaineLaMoinsChere"] est la voiture américaine la moins chère ( @ViewData["PrixAmericaineLaMoinsChere"] $)</p>
+

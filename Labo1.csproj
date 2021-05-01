@@ -167,6 +167,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Voiture\Index.cshtml" />
     <Content Include="Views\Voiture\Create.cshtml" />
+    <Content Include="Views\Voiture\Rapport.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

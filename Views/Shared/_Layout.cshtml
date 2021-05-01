@@ -19,17 +19,20 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/"><i class='fas fa-tachometer-alt'></i>  Gestion des voitures</a>
-                <!--@Html.ActionLink("Gestion des voitures", "Index", "Voiture", new { area = "" }, new { @class = "navbar-brand" })-->
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <!--li>@Html.ActionLink("Enregistrer", "Index", "Home")</li-->
-                    <li><a href="Voiture/Create"><i class="fas fa-plus-circle"></i>  Enregistrer une voiture</a></li>
+                    <li><a href="/Voiture/Create"><i class="fas fa-plus-circle"></i>  Enregistrer une voiture</a></li>
+                    <li><a href="/Voiture/Rapport"><i class="fas fa-list"></i>  Rapport</a></li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="container body-content">
+        <br />
+        <div class="jumbotron">
+            <h2 class="text-center"><i class="fas fa-car"></i> <b>GESTION DES VOITURES</b></h2>
+        </div>
         @RenderBody()
         <hr />
         <footer>
